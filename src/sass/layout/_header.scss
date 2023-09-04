@@ -80,6 +80,13 @@
 
 .connect__btn {
   color: var(--main-btn-color);
+  margin-right: 30px;
+
+  transition: background-color 250ms ease;
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 
   @include desktop {
     margin-left: 25px;

@@ -4,7 +4,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  max-width: 1280px;
+  max-width: 1600px;
   margin: 0 auto;
 
   padding-top: 84px;
@@ -20,6 +20,9 @@
     padding-top: 130px;
     padding-bottom: 130px;
   }
+  & .container {
+    overflow: hidden;
+  }
 }
 
 .price-top-text {
@@ -33,49 +36,65 @@
   max-width: 418px;
   padding: 30px;
   background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  margin-bottom: 50px;
+
+  @include tablet {
+    max-width: 690px;
+    padding: 30px 40px;
+  }
 
   @include desktop {
     display: flex;
+    max-width: 1170px;
+    padding: 0;
   }
 }
 
 .price-list {
-  // padding: 30px 84px;
-  // flex-grow: 1;
-  // padding-right: 31px;
-  // padding-left: 31px;
-
-  @include tablet {
+  &:not(:last-child) {
+    margin-bottom: 20px;
   }
+
   @include desktop {
+    padding: 30px 40px;
+    flex-grow: 1;
+    &--dark {
+      background: linear-gradient(
+        180deg,
+        #090b13 0%,
+        rgba(9, 11, 19, 0.2) 100%
+      );
+    }
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
   }
 }
 
-// .price-list-light {
-//   background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
-// }
+.price-list-light {
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
 
-// .price-list-dark {
-//   background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
-// }
+.price-list-dark {
+  background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
 
 .price-item {
   display: flex;
-  margin-bottom: var(--typical-margin);
-  // justify-content: space-between;
-  // align-items: baseline;
+  justify-content: space-between;
+  align-items: baseline;
 
-  // &::before {
-  //   content: "";
-  //   flex-grow: 1;
-  //   background-color: rgba(157, 164, 189, 0.12);
-  //   height: 1px;
-  //   margin-right: 6px;
-  // }
-
-  // &:last-child {
-  //   margin-bottom: 0;
-  // }
+  &:not(:last-child) {
+    margin-bottom: var(--typical-margin);
+  }
+  &::before {
+    content: '';
+    flex-grow: 1;
+    height: 1px;
+    margin-right: 6px;
+    margin-left: 6px;
+    background-color: rgba(157, 164, 189, 0.12);
+  }
 }
 
 .price-item-text {
@@ -101,4 +120,10 @@
   margin: 0 auto;
   display: block;
   margin-top: 50px;
+
+  transition: background-color 250ms ease;
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }

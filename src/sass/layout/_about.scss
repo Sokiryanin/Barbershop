@@ -69,4 +69,10 @@
 }
 .about-content__btn {
   color: #303030;
+  transition: background-color 250ms ease;
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: white;
+  }
 }
