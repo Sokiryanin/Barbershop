@@ -1,0 +1,192 @@
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(25, 28, 38, 0.388);
+  position: fixed;
+  top: 0;
+
+  transition: opacity 300ms, visibility 300ms;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  width: 500px;
+  min-height: 600px;
+  background-color: #fff;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 5px;
+  transition: transform 300ms;
+  padding: 25px;
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+.modal-close {
+  width: 40px;
+  height: 40px;
+  border: 1px solid gray;
+  background-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.modal-title {
+  font-family: 'Roboto';
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+
+  margin-bottom: 15px;
+}
+
+.modal-field {
+  margin-bottom: 20px;
+}
+
+.modal-input {
+  width: 100%;
+  height: 45px;
+  border: 2px solid #999;
+  border-radius: 5px;
+  padding-left: 30px;
+  outline: none;
+
+  &:focus {
+    border-color: #ff6c00;
+  }
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.modal-icon {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  .modal-input:focus + & {
+    fill: var(--accent-color);
+  }
+}
+
+.modal-label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.modal-textarea {
+  resize: none;
+  width: 100%;
+  min-height: 100px;
+  border: 2px solid #999;
+  border-radius: 5px;
+  outline: none;
+}
+
+.check-text {
+  color: #555555;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  & span {
+    width: 16px;
+    height: 15px;
+    border: 2px solid #090b13;
+    border-radius: 3px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-check:checked + & span {
+    background-color: var(--accent-color);
+    border: none;
+  }
+}
+
+/* CHECKBOX з бігунком  */
+/* 
+.check-text::before {
+  content: "";
+  width: 40px;
+  height: 22px;
+  border: 1px solid #999;
+  border-radius: 50px;
+  margin-right: 5px;
+}
+
+.check-text::after {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background-color: #9da4bd5e;
+  left: 3px;
+  transition: transform 300ms linear, background-color 300ms linear;
+}
+
+.modal-check:checked + .check-text::after {
+  transform: translate(16px);
+  background-color: #ff6a00be;
+} */
+
+/* КАСТОМНА ІКОНКА ЧЕК-БОКСУ ЧЕРЕЗ БІФОР */
+
+/* .check-text::before {
+  content: "";
+  width: 16px;
+  height: 15px;
+  border: 2px solid #090b13;
+  border-radius: 3px;
+  margin-right: 8px;
+}
+
+.modal-check:checked + .check-text::before {
+  background-color: var(--accent-color);
+  background-image: url(../image/Vector.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+
+.modal-check:focus + .check-text::before {
+  border-color: var(--accent-color);
+} */
+
+/* КАСТОМНА ІКОНКА ЧЕРЕЗ СПРАЙТ */
+
+.check-icon {
+  fill: transparent;
+
+  .modal-check:checked + .check-text & {
+    fill: #ffffff;
+  }
+}

@@ -1,0 +1,170 @@
+.hero .container {
+  display: flex;
+  width: 100%;
+  padding: 0;
+
+  @include tablet {
+    width: 720px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @include desktop {
+    width: 1200px;
+  }
+}
+
+.soc__link {
+  @include font(11px, 600, 1.36, 0.2em);
+
+  color: #303030;
+  transition: color 250ms ease;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.soc {
+  width: 90px;
+  display: none;
+  align-items: flex-end;
+  margin-bottom: 40px;
+
+  @include tablet {
+    display: flex;
+  }
+}
+
+.soc__list {
+  @include tablet {
+    transform: rotate(-90deg) translate(-19px);
+    align-items: center;
+    transform-origin: top left;
+    display: flex;
+
+    &::before {
+      content: '';
+      width: 60px;
+      height: 1px;
+      background-color: #303030;
+      margin-right: 40px;
+    }
+  }
+}
+
+.soc__item + .soc__item {
+  margin-left: 30px;
+}
+
+.hero-content {
+  background-color: #555555;
+  background-image: linear-gradient(
+      rgba(25, 28, 38, 0.2),
+      rgba(25, 28, 38, 0.2)
+    ),
+    url(/src/images/hero-bg-mob.jpeg);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 208px 15px 183px;
+  flex-grow: 1;
+
+  @include retina {
+    background-image: linear-gradient(
+        rgba(25, 28, 38, 0.2),
+        rgba(25, 28, 38, 0.2)
+      ),
+      url(/src/images/hero-bg-mob2x.jpeg);
+  }
+
+  @include mobile {
+    padding: 208px 31px 183px;
+  }
+
+  @include tablet {
+    padding: 280px 70px 234px;
+    background-image: linear-gradient(
+        rgba(25, 28, 38, 0.2),
+        rgba(25, 28, 38, 0.2)
+      ),
+      url(/src/images/hero-bg-tab.jpeg);
+
+    @include retina {
+      background-image: linear-gradient(
+          rgba(25, 28, 38, 0.2),
+          rgba(25, 28, 38, 0.2)
+        ),
+        url(/src/images/hero-bg-tab2x.jpeg);
+    }
+  }
+
+  @include desktop {
+    padding: 272px 96px 206px 96px;
+
+    background-image: linear-gradient(
+        rgba(25, 28, 38, 0.2),
+        rgba(25, 28, 38, 0.2)
+      ),
+      url(/src/images/hero-bg-deskt.jpeg);
+
+    @include retina {
+      background-image: linear-gradient(
+          rgba(25, 28, 38, 0.2),
+          rgba(25, 28, 38, 0.2)
+        ),
+        url(/src/images/hero-bg-deskt2x.jpeg);
+    }
+  }
+}
+
+.hero-content__top-text {
+  margin-bottom: var(--typical-margin);
+}
+
+.hero-content__title {
+  font-family: 'Raleway';
+  @include font(48px, null, 1.17, 0.05em);
+
+  color: var(--main-btn-color);
+  margin-bottom: var(--typical-margin);
+  display: flex;
+  align-items: center;
+
+  @include desktop {
+    font-size: 72px;
+    line-height: 1.16;
+  }
+
+  // &::before {
+  //   content: "";
+  //   width: 40px;
+  //   height: 40px;
+  //   background-color: #fff;
+  //   border-radius: 50%;
+  // }
+
+  // &::after {
+  //   content: "";
+  //   background-color: var(--accent-color);
+  //   background-image: url(../image/facebook\ .svg);
+  //   background-size: cover;
+  //   background-repeat: no-repeat;
+  //   background-position: center;
+  //   width: 50px;
+  //   height: 50px;
+  // }
+}
+
+.hero-content__bottom-text {
+  color: #9da4bd;
+  max-width: 306px;
+
+  @include tablet {
+    max-width: 360px;
+  }
+  @include desktop {
+    max-width: 400px;
+  }
+}

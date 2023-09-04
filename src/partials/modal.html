@@ -1,0 +1,79 @@
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <h3 class="modal-title">Модальне вікно</h3>
+    <form>
+      <div class="modal-field">
+        <label for="user-name" class="modal-label">Ваше імʼя</label>
+        <div class="input-wrap">
+          <input
+            name="user-name"
+            id="user-name"
+            type="text"
+            placeholder="Eugene"
+            class="modal-input"
+          />
+          <svg class="modal-icon" width="20" height="20">
+            <use href="/src/images/sprite.svg#icon-user"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="modal-field">
+        <label for="user-tel" class="modal-label">Ваш телефон</label>
+        <div class="input-wrap">
+          <input
+            name="user-tel"
+            id="user-tel"
+            type="tel"
+            placeholder="+380731112233"
+            class="modal-input"
+          />
+          <svg class="modal-icon" width="20" height="20">
+            <use href="/src/images/sprite.svg#icon-modal-phone"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="modal-field">
+        <label for="user-email" class="modal-label">Ваш email</label>
+        <div class="input-wrap">
+          <input
+            name="user-email"
+            id="user-email"
+            type="email"
+            placeholder="example@example.com"
+            class="modal-input"
+          />
+          <svg class="modal-icon" width="20" height="20">
+            <use href="/src/images/sprite.svg#icon-modal-email"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="modal-field">
+        <label for="user-text" class="modal-label">Ваш коментар</label>
+        <textarea
+          name="user-text"
+          id="user-text"
+          placeholder="Введіть текст"
+          class="modal-textarea"
+        ></textarea>
+      </div>
+      <div class="modal-field">
+        <input
+          type="checkbox"
+          name="privacy"
+          id="privacy"
+          value="true"
+          class="modal-check visually-hidden"
+        />
+        <label for="privacy" class="check-text">
+          <span>
+            <svg class="check-icon" width="11" height="8">
+              <use href="/src/images/sprite.svg#icon-Vector"></use>
+            </svg>
+          </span>
+          Готовий працювати за їжу,
+        </label>
+      </div>
+    </form>
+    <button type="button" class="modal-close" data-modal-close>X</button>
+  </div>
+</div>
