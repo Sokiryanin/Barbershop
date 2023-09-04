@@ -32,16 +32,16 @@
   text-align: center;
   width: 100%;
 
-  // @media screen and (min-width: 768px) {
-  //   width: calc((100% - 30px) / 2);
-  // }
+  @media screen and (min-width: 768px) {
+    // width: 450px;
+  }
 
   @media screen and (min-width: 1200px) {
     width: calc((100% - 60px) / 3);
   }
 }
 
-.card-list__item:hover .card-list__wrap-text {
+.card-list__top-wrap:hover .card-list__wrap-text {
   transform: translate(0);
 }
 

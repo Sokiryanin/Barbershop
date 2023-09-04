@@ -1,8 +1,13 @@
 .form {
-  padding-top: 130px;
-  padding-bottom: 193px;
-  width: calc(50% + 15px);
-  padding-right: 40px;
+  padding-top: 84px;
+  padding-bottom: 84px;
+  overflow: hidden;
+  text-align: center;
+
+  @include desktop {
+    width: calc(50% - 15px);
+    padding-top: 130px;
+  }
 }
 
 .form-title {
@@ -10,14 +15,23 @@
 }
 
 .online-form {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .input-field {
-  width: 265px;
   position: relative;
+  margin-bottom: 40px;
+
+  @include tablet {
+    width: 300px;
+  }
+  @include desktop {
+    width: 260px;
+  }
 }
 
 .online-input {
@@ -95,4 +109,7 @@
 
 .online-btn {
   color: var(--main-btn-color);
+  @include tablet {
+    margin: 0 auto;
+  }
 }
