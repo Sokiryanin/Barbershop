@@ -2,10 +2,10 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://Sokiryanin.github.io/Barbershop",
+  "homepage": "https://Sokiryanin.github.io/barbershop",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /Barbershop/"
+    "build": "parcel build src/*.html --public-url /barbershop/"
   },
   "repository": {
     "type": "git",
